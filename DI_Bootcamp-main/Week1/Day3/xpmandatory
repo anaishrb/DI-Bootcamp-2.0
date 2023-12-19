@@ -1,0 +1,74 @@
+# Exercice 1
+
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+result_dict = dict(zip(keys,values))
+print(result_dict)
+
+#Exercice 2
+family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
+total_cost = 0 
+
+for person, age in family.items():
+    if 3 <= age <= 12:
+        ticket_price = 10
+    elif age > 12:
+        ticket_price = 15
+    else:
+        ticket_price = 0
+
+total_cost += ticket_price
+
+print(f"{person} has to pay ${ticket_price} for the ticket.")
+
+#Exercice 3
+
+brand = {
+    "name": "Zara",
+    "creation_date": 1975,
+    "creator_name": "Amancio Ortega Gaona",
+    "type_of_clothes": ["men", "women", "children", "home"],
+    "international_competitors": ["Gap", "H&M", "Benetton"],
+    "number_stores": 7000,
+    "major_color": {
+        "France": "blue",
+        "Spain": "red",
+        "US": ["pink", "green"]
+    }
+}
+
+brand["number_stores"] = "3"
+
+print(brand)
+type_of_clothes = brand["type_of_clothes"]
+competitors = brand["international_competitors"]
+
+# Formulate a sentence describing Zara's clients
+sentence = f"Zara's clients are individuals looking for {', '.join(type_of_clothes)} and competing with stores like {', '.join(competitors)}."
+
+print(sentence)
+
+#5. Add a key called country_creation with a value of Spain.
+
+brand["country_creation"] = "Spain"
+if "international_competitors" in brand:
+    brand["international_competitors"].append("Desigual")
+del brand["creation_date"]
+print(brand)
+last_competitor = brand.get("international_competitors", [])[-1]
+print("Last international competitor:", last_competitor)
+
+us_colors = brand.get("major_color", {}).get("US")
+
+print(us_colors)
+num_pairs = len(brand)
+print("Number of key-value pairs:", num_pairs)
+keys = list(brand.keys())
+print(keys)
+more_on_zara = {
+    "creation_date": 1975,
+    "number_stores": 10000
+}
+brand.update(more_on_zara)
+print("Value of the key 'number_stores':", brand["number_stores"])
+
