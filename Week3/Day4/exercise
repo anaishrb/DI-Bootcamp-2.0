@@ -1,0 +1,33 @@
+import psycopg2
+
+#Establish a connection
+conn=psycopg2.connect(
+    dbname='user_management',
+    user='postgres',
+    password='pgjav',
+    host='localhost',
+    port='5432'
+)
+
+# Create a cursur object to execute SQL queries
+cur = conn.cursor()
+
+# Insert query
+insert_query = 'INSERT INTO users (username, email, age) VALUES (%s, %s, %s)'
+data_to_insert = ('toby', 'xxx@gmail.com', 23)
+cur.execute(insert_query, data_to_insert)
+# cur.execute('INSERT INTO users (username, email, age) VALUES (%s, %s, %s)', ('toby', 'xxx@gmail.com', 23))
+
+# Update query
+update_query = 'UPDATE users SET username=%s, email=%s, age=%s WHERE id= %s'
+new_value = ('marie', 'marie@gmail.com', 33, 3)
+cur.execute(update_query, new_value)
+conn.commit()
+
+# Delete query
+cur.execute('DELETE FROM users WHERE id=%s', ('4'))
+conn.commit()
+
+
+cur.close()
+conn.close()

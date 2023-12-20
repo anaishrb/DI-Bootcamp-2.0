@@ -1,0 +1,15 @@
+list1 = [5, 10, 15, 20, 25, 50, 20]
+if 20 in list1:
+    index = list1.index(20)
+    list1[index] = 200
+print(list1)
+
+my_set = set()
+my_set2 = {60, 14, 'Morty'}
+
+my_set.add('Rick')
+
+print(my_set)
+print (my_set.intersection(my_set2))
+
+input

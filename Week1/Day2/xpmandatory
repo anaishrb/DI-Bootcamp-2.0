@@ -1,0 +1,50 @@
+
+#Exerice 1 
+
+my_fav_numbers = {8, 13, 15, 16}
+my_fav_numbers.add(6)
+my_fav_numbers.add(18)
+print(my_fav_numbers)
+my_fav_numbers.remove(18)
+print(my_fav_numbers)
+friend_fav_numbers = {9, 14, 25, 34}
+our_fav_numbers = my_fav_numbers.union(friend_fav_numbers)
+print(our_fav_numbers)
+
+# Exerice 2 no because Tulpe are supposed to be not changed
+
+# Exercice 3
+basket = ["Banana", "Apples", "Oranges", "Blueberries"]
+basket.pop(0)
+print(basket)
+basket.pop(2)
+print(basket)
+basket.append("kiwi")
+print(basket)
+basket.insert(0, "Apples")
+print(basket)
+apple_count = basket.count("Apples")
+print("Number for apple", apple_count)
+basket.clear()
+print(basket)
+
+# Exercice 5
+
+numbers = list(range(1,21))
+for number in numbers:
+    print(number)
+for numbers in range(1, 21):
+    if numbers % 2 == 0:  # Check if the index is even
+        print(numbers)
+
+
+# Exercice 6
+
+my_name = "Anaïs"
+user_name = input("give me your name")
+while user_name != my_name:
+    print(user_name)
+
+# Exerice 7 
+user_favourite_fruit = input("What is your favourite fruit")
+
