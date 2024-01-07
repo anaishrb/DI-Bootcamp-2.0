@@ -1,0 +1,5 @@
+with open('class.html', 'r') as file:
+    html_content = file.read()
+
+#Parse the HTML content using BeautifulSoup
+soup = BeautifulSoup(html_content, 'html.parser')
