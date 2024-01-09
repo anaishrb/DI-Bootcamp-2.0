@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page HTML améliorée par JavaScript</title>
+  <script>
+    // JavaScript pour modifier le contenu à la charge de la page
+    window.onload = function() {
+      document.getElementById('dynamicHeading').textContent = 'Page améliorée par JavaScript';
+    }
+
+    // Fonction pour changer la couleur de l'élément
+    function changeColor() {
+      document.getElementById('dynamicHeading').style.backgroundColor = 'lightblue'; // Change la couleur de fond
+    }
+  </script>
+</head>
+<body>
+  <h1 id="dynamicHeading">Bienvenue sur une page dynamique</h1>
+  <p>Cette page HTML est améliorée avec JavaScript.</p>
+  <button onclick="changeColor()">Changer la couleur</button> <!-- Bouton pour changer la couleur -->
+  <ul>
+    <li>Élément 1</li>
+    <li>Élément 2</li>
+    <li>Élément 3</li>
+  </ul>
+</body>
+</html>
